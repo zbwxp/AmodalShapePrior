@@ -669,7 +669,7 @@ _C.TEST.EVAL_AMODAL_TYPE = "NORMAL"
 # Misc options
 # ---------------------------------------------------------------------------- #
 # Directory where output files are written
-_C.OUTPUT_DIR = '/p300/workspace/detectron2/'
+_C.OUTPUT_DIR = '/home/bowenz/sensei-fs-symlink/users/bowenz/checkpoint/shape_prior/kins'
 _C.OUTPUT = CN()
 _C.OUTPUT.TRAIN_VERSION = 'main'
 # Set seed to negative to fully randomize everything.

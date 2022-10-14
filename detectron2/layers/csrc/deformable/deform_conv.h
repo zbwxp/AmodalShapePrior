@@ -1,6 +1,9 @@
 // Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 #pragma once
 #include <torch/types.h>
+#ifndef AT_CHECK
+#define AT_CHECK TORCH_CHECK 
+#endif
 
 namespace detectron2 {
 

@@ -281,7 +281,7 @@ def annotations_to_instances(annos, image_size, mask_format="polygon"):
                 # print('masks:{}'.format(polygons))
             if not isinstance(visible_segm[0], list):
                 visible_masks = visible_segm
-                visible_masks = BitMasks(torch.stack([torch.from_numpy(x) for x in visible_masks]))
+                visible_masks = BitMasks(torch.stack([torch.from_numpy(x.copy()) for x in visible_masks]))
             else:
                 # print('visible_masks:{}'.format(visible_polygons))
                 visible_masks = BitMasks.from_polygon_masks(visible_segm, *image_size)

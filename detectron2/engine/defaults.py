@@ -435,7 +435,7 @@ class DefaultTrainer(SimpleTrainer):
         if os.path.exists("{}_codebook.npy".format(dataset_name)) and cfg.MODEL.ROI_MASK_HEAD.RECON_NET.LOAD_CODEBOOK:
             logger.info("Loading recon net and codebook")
             model.roi_heads.recon_net.load_state_dict(torch.load("{}_recon_net.pth".format(dataset_name)))
-            model.roi_heads.recon_net.vector_dict = np.load("{}_codebook.npy".format(dataset_name))[()]
+            model.roi_heads.recon_net.vector_dict = np.load("{}_codebook.npy".format(dataset_name), allow_pickle=True)[()]
         return model
 
     @classmethod
